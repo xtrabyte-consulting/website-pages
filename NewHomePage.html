@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XtraByte Consulting</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+  <!-- Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-HoP4unYVY4pPLX+vajorqc+jL1YKKIxSAoq57H+KPGJTMNSV6nxIc1i44Lp+n/vc2zq8V+M0j8eW5P4DNPYAWA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root { --primary: #4FC3F7; --dark: #0A1828; --light: #F4F7FA; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; color: var(--dark); background: var(--dark); overflow-x: hidden; }
+    nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; }
+    nav .logo { font-size: 1.5rem; font-weight: 600; color: var(--primary); }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 30px; }
+    nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; }
+    nav ul li a:hover { color: var(--primary); }
+    section { padding: 100px 20px; }
+    #hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: url('https://pd.w.org/2022/01/2661f82cd1ba9172.16386413.jpg') center/cover no-repeat; position: relative; text-align: center; color: white; }
+    #hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+    #hero .content { position: relative; z-index: 1; }
+    #hero h1 { font-size: 3rem; margin-bottom: 20px; }
+    #hero p { font-size: 1.2rem; margin-bottom: 30px; }
+    #hero .btn { padding: 12px 30px; background: var(--primary); color: white; text-decoration: none; font-weight: 600; border-radius: 30px; transition: background 0.3s; }
+    #hero .btn:hover { background: #3bb5d9; }
+    .typed-cursor { opacity: 1; animation: blink 0.7s infinite; }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+    .section-title { text-align: center; margin-bottom: 60px; font-size: 2rem; color: var(--dark); }
+    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .card { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 30px; width: 300px; text-align: center; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-10px); }
+    .card img { border-radius: 8px; margin-bottom: 15px; width: 100%; }
+    .card i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+    .card h3 { margin-bottom: 15px; font-size: 1.2rem; }
+    .card p { font-size: 0.95rem; line-height: 1.6; }
+    #contact form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+    #contact input, #contact textarea { padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+    #contact button { padding: 12px; background: var(--primary); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+    #contact button:hover { background: #3bb5d9; }
+    footer { text-align: center; padding: 30px 0; background: #fff; color: #777; font-size: 0.9rem; }
+    #backToTop {
+      position:fixed;
+      bottom:30px;
+      right:30px;
+      background:var(--primary);
+      color:#fff;
+      padding:12px 14px;
+      border-radius:50%;
+      font-size:1.2rem;
+      display:none;
+      cursor:pointer;
+      z-index:1000;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="hero">
+    <div class="content">
+      <h1 data-aos="zoom-in">We Turn Ideas Into Reality</h1>
+      <p data-aos="fade-up">I am <span id="typed"></span><br/>Engineering Solutions &amp; Digital Experiences</p>
+      <a href="https://xtrabyteconsulting.com/contact-us/" class="btn" data-aos="fade-up" data-aos-delay="200">Start Your Project!</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title" data-aos="fade-up">What I Do</h2>
+    <div class="cards">
+      <div class="card" data-aos="flip-left">
+        <img src="https://xtrabyteconsulting.com/wp-content/uploads/2024/12/qtq80-Y2sM7a-1024x683.jpeg" alt="Product Prototyping">
+        <i class="fas fa-cogs"></i>
+        <h3>Product Prototyping</h3>
+        <p>Hardware interfacing, Internet of Things, robotics.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="100">
+        <img src="https://xtrabyteconsulting.com/wp-content/uploads/2024/11/qtq80-hWe67X-1024x841.jpeg" alt="Mobile Development">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Development</h3>
+        <p>Native iOS &amp; Android, cross-platform solutions.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="200">
+        <img src="https://xtrabyteconsulting.com/wp-content/uploads/2024/11/qtq80-HkzELb-1024x555.jpeg" alt="Machine Learning & AI">
+        <i class="fas fa-robot"></i>
+        <h3>Machine Learning &amp; AI</h3>
+        <p>Predictive analytics, image recognition, financial modeling.</p>
+      </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="300">
+        <i class="fas fa-chart-line"></i>
+        <h3>Automation & Testing</h3>
+        <p>EMC testing workflows and SCPI-driven instrument control.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 class="section-title" data-aos="fade-up">Highlighted Projects</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-right">
+        <img src="https://xtrabyteconsulting.com/wp-content/uploads/2024/11/Screenshot-2024-10-17-170604-1024x601.png" alt="ImmuniSweep Suite">
+        <h3>EMC Lab Suite</h3>
+        <p>Automated end-to-end compliance testing rig with real-time reporting.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://xtrabyteconsulting.com/wp-content/uploads/2024/11/IMG_0995-473x1024.png" alt="PocketWizard Control App">
+        <h3>PocketWizard Control</h3>
+        <p>Bluetooth-based remote camera firmware updates and alerts.</p>
+      </div>
+      <div class="card" data-aos="fade-left" data-aos-delay="200">
+        <img src="https://xtrabyteconsulting.com/wp-content/uploads/2024/12/Vybe-Screenshot-474x1024.jpg" alt="Vybe Social">
+        <h3>Vybe Social</h3>
+        <p>User-centric social media platform for curated content feeds.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter">
+    <h2 data-aos="fade-up">Stay Updated</h2>
+    <p data-aos="fade-up" data-aos-delay="100">Subscribe to our newsletter for the latest news.</p>
+    <form data-aos="fade-up" data-aos-delay="200">
+      <input type="email" placeholder="Your email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+    <form action="https://xtrabyteconsulting.com/contact-us/">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="How can I help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 XtraByte Consulting &middot; Crafted with <i class="fas fa-heart" style="color:#e25555"></i>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-euSkULn+DgMGFnnKHHb0wNPZo/P7wAD+oVM+UHHdHwaCeQkMJEYp7UB6ebSXLRLTXhLLcFC5pM/ywejBxnHI3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1kx7sH/OfT/AntYx9o6ZJ5t4iBjV+CAaTFYPWS6jR3ojIy8QOK6L7H5oQ3cH3hgjmvLRgNL0AcwE6L3AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
+    // Typed.js for dynamic text
+    new Typed('#typed', { strings: ["Innovative", "Precise", "Reliable", "Scalable"], typeSpeed: 60, backSpeed: 30, loop: true });
+    // GSAP Entrance Animations
+    gsap.from('nav', { y: -100, opacity: 0, duration: 1 });
+    gsap.utils.toArray('section').forEach((section, i) => {
+      gsap.from(section, { opacity: 0, y: 50, delay: i * 0.3, duration: 1, scrollTrigger: { trigger: section, start: 'top 80%' } });
+    });
+  </script>
+</body>
+</html>
