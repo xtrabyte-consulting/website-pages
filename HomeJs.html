@@ -16,9 +16,29 @@
     :root { --primary: #021830; --dark: #021830; --light: #c8f32e; --accent: #f32ec8; }
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Montserrat',sans-serif; color:var(--light); background:var(--primary); overflow-x:hidden; }
+    /* Hide WP page title (removes that big gap) */
+    .entry-header, 
+    .entry-header .entry-title {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
     section { padding:60px 20px; }
     /* Hero */
-    #hero { width:100%; min-height:calc(100vh - 80px); display:flex; flex-direction:column; justify-content:center; align-items:center; background:url('https://xtrabyteconsulting.com/wp-content/uploads/2025/06/XtraByte-Hero-Image.png') center/cover no-repeat; position:relative; color:#fff; text-align:center; }
+    #hero { 
+        width:100%; 
+        min-height:100vh; 
+        margin-top:0;
+        padding-top:0; 
+        display:flex; 
+        flex-direction:column; 
+        justify-content:center; 
+        align-items:center; 
+        background:url('https://xtrabyteconsulting.com/wp-content/uploads/2025/06/XtraByte-Hero-Image.png') center/cover no-repeat; 
+        position:relative; 
+        color:#fff; 
+        text-align:center; 
+    }
     #hero::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
     #hero .content { position:relative; z-index:1; }
     #hero h1 { font-size:3rem; margin-bottom:20px; }
