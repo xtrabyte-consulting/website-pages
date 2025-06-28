@@ -208,24 +208,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1kx7sH/OfT/AntYx9o6ZJ5t4iBjV+CAaTFYPWS6jR3ojIy8QOK6L7H5oQ3cH3hgjmvLRgNL0AcwE6L3AQ==" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
-  <script>
-    // Ensure all JS libs are loaded before init
-    function initPage() {
-      if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 800, once: true });
+  <script defer>
+    window.addEventListener('load', function() {
+      if (window.AOS) {
+        AOS.init({ duration: 800, once: true, offset: 120 });
       }
-      if (typeof Typed !== 'undefined') {
-        new Typed('#typed', { strings: ['Innovative','Precise','Reliable','Scalable'], typeSpeed: 60, backSpeed: 30, loop: true });
+      if (window.Typed) {
+        new Typed('#typed', {
+          strings: ['Innovative','Precise','Reliable','Scalable'],
+          typeSpeed: 60,
+          backSpeed: 30,
+          loop: true
+        });
       }
-      if (typeof Splide !== 'undefined') {
-        new Splide('#testi-slider', { type: 'loop', autoplay: true, interval: 5000 }).mount();
+      if (window.Splide) {
+        new Splide('#testi-slider', {
+          type: 'loop',
+          autoplay: true,
+          interval: 5000
+        }).mount();
       }
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initPage);
-    } else {
-      initPage();
-    }
+    });
   </script>
 </body>
 </html>
