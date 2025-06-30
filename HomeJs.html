@@ -229,7 +229,37 @@
   <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
-
+  <script defer>
+    window.addEventListener('load', function() {
+      if (window.Typed) {
+new Typed('#typed', {
+          strings: ['Application Development','Machine Learning','Software Testing','Digital Marketing'],
+          typeSpeed: 60,
+          backSpeed: 30,
+          loop: true
+        });
+      }
+ 
+      
+    });
+</script>
+<script defer>
+    window.addEventListener('load', function() {
+      if (window.Typed) {
+const words = ['Precision Software Development.','Expert Engineering from Vision to Reality.'];
+      function startTyping(index) {
+        if (index >= words.length) return;
+        new Typed(`#typed-${index}`, {
+          strings: [words[index]],
+          typeSpeed: 80,
+          showCursor: false,
+          onComplete: () => startTyping(index + 1)
+        });
+        startTyping(0);      
+    }
+    }
+});
+</script>
   <script defer>
     window.addEventListener('load', function() {
       if (window.AOS) {
@@ -243,6 +273,30 @@
           loop: true
         });
       }
+       new Typed('#typed_adj', {
+          strings: ['Application Development','Machine Learning','Software Testing','Digital Marketing'],
+          typeSpeed: 60,
+          backSpeed: 30,
+          loop: true
+        });
+        new Typed('#typed', {
+          strings: ['Scalable Application Development','Precision Machine Learning','Reliable Software Testing','Innovative Digital Marketing','Expert Hardware Integration'],
+          typeSpeed: 60,
+          backSpeed: 30,
+          loop: true
+        });
+        const words = ['Precision Software Development.','Expert Engineering from Vision to Reality.','Innovative Solutions for Tomorrow.','Your Partner in Digital Transformation.'];
+      function startTyping(index) {
+        if (index >= words.length) return;
+        new Typed(`#typed-${index}`, {
+          strings: [words[index]],
+          typeSpeed: 80,
+          showCursor: false,
+          onComplete: () => startTyping(index + 1)
+        });
+        startTyping(0);
+        }
+
       if (window.Splide) {
         new Splide('#testi-slider', {
           type: 'loop',
@@ -251,6 +305,14 @@
         }).mount();
       }
     });
-  </script>
+</script>
+    <script>
+        // GSAP Entrance Animations
+        gsap.from('nav', { y: -100, opacity: 0, duration: 1 });
+        gsap.utils.toArray('section').forEach((section, i) => {
+        gsap.from(section, { opacity: 0, y: 50, delay: i * 0.3, duration: 1, scrollTrigger: { trigger: section, start: 'top 80%' } });
+        });
+    </script>
+</script>
 </body>
 </html>
